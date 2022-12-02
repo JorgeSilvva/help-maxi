@@ -16,10 +16,10 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../webroot/css/dashboard.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Dashboarb - Help Maxi</title>
@@ -66,19 +66,19 @@
 	</div>
 	<div class="col-div-3">
 		<div class="box">
-			<p>2<br/><span>Meus Tickets</span></p>
+			<p>2<br/><span>Tickets</span></p>
 			<i class="fa fa-list box-icon"></i>
 		</div>
 	</div>
 	<div class="col-div-3">
 		<div class="box">
-			<p>1<br/><span>Abertos</span></p>
+			<p>1<br/><span>ON</span></p>
 			<i class="fa fa-tasks box-icon"></i>
 		</div>
 	</div>
 	<div class="col-div-3">
 		<div class="box">
-			<p>1<br/><span>Resolvidos</span></p>
+			<p>1<br/><span>OFF</span></p>
 			<i class="fa fa-check box-icon"></i>
 		</div>
 	</div>

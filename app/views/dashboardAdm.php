@@ -26,13 +26,13 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../webroot/css/dashboard.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Dashboarb Adm - Help Maxi</title>
+  <title>Dashboarb ADM - Help Maxi</title>
 </head>
 
 <body>
@@ -46,6 +46,7 @@
     <a href="ticketLista.php?search=fechado"class="icon-a"><i class="fa fa-check icons"></i> &nbsp;&nbsp;Resolvidos</a>
     <a href="../controller/logout.php"class="icon-a"><i class="fa fa-sign-out icons"></i> &nbsp;&nbsp;Desconectar</a>
   </div>
+
   <div id="main">
 
 	<div class="head">
@@ -68,7 +69,7 @@
 	
 	<div class="col-div-3">
 		<div class="box">
-			<p>167<br/><span>Usuários</span></p>
+			<p>167<br/><span>Ativos</span></p>
 			<i class="fa fa-users box-icon"></i>
 		</div>
 	</div>
@@ -80,13 +81,13 @@
 	</div>
 	<div class="col-div-3">
 		<div class="box">
-			<p>4<br/><span>Abertos</span></p>
+			<p>4<br/><span>ON</span></p>
 			<i class="fa fa-tasks box-icon"></i>
 		</div>
 	</div>
 	<div class="col-div-3">
 		<div class="box">
-			<p>49<br/><span>Resolvidos</span></p>
+			<p>49<br/><span>OFF</span></p>
 			<i class="fa fa-check box-icon"></i>
 		</div>
 	</div>

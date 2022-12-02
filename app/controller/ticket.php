@@ -8,6 +8,9 @@ if(!isset($_SESSION)){
     if(isset($_POST['submit']))
     {
 
+        $frase = "Novo Ticket iniciado, e-mail enviado com sucesso";
+        $_SESSION['frase'] = $frase;
+
         $assunto = mysqli_real_escape_string($conexao, trim($_POST['assunto']));
         $descricao = mysqli_real_escape_string($conexao, trim($_POST['descricao']));
         $setor = mysqli_real_escape_string($conexao, trim($_POST['setor']));

@@ -47,7 +47,7 @@ include('../controller/ticketEdit.php');
 
         <div class="form-textarea">
           <label>Descrição</label>
-            <textarea name="descricao" id="descricao" cols="60" rows="6" value="" placeholder="Digite aqui a sua mensagem"> <?php echo $descricao;?> </textarea>
+            <textarea name="descricao" id="descricao" cols="60" rows="6" value="" placeholder="Digite aqui a sua mensagem" required> <?php echo $descricao;?> </textarea>
         </div>       
 
         <div class="form-radio-checkbox">
@@ -60,9 +60,9 @@ include('../controller/ticketEdit.php');
 
         <div class="form-radio-checkbox">
           <label></label>
-          <label><input type="radio" name="prioridade" value="normal" class="input-radio" <?php echo ($prioridade == 'normal') ? 'checked' : '';?> />Normal</label>
-          <label><input type="radio" name="prioridade" value="media" class="input-radio" <?php echo ($prioridade == 'media') ? 'checked' : '';?> />Média</label>
-          <label><input type="radio" name="prioridade" value="alta" class="input-radio"<?php echo ($prioridade == 'alta') ? 'checked' : '';?> />Alta</label>
+          <label><input type="radio" name="prioridade" value="normal" class="input-radio" <?php echo ($prioridade == 'normal') ? 'checked' : '';?> required />Normal</label>
+          <label><input type="radio" name="prioridade" value="media" class="input-radio" <?php echo ($prioridade == 'media') ? 'checked' : '';?> required />Média</label>
+          <label><input type="radio" name="prioridade" value="alta" class="input-radio"<?php echo ($prioridade == 'alta') ? 'checked' : '';?> required />Alta</label>
         </div>       
           
         <div class="form-group">

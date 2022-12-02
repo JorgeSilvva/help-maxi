@@ -51,7 +51,7 @@ if(!isset($_SESSION)){
                         <form action="../controller/cadastrar.php" method="POST">
                             <div class="field">
                                 <div class="control">
-                                    <input name="nome" type="text" class="input is-large" placeholder="Digite seu nome completo" autofocus>
+                                    <input name="nome" type="text" class="input is-large" placeholder="Digite seu nome completo">
                                 </div>
                             </div>
                             <div class="field">

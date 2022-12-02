@@ -45,7 +45,7 @@ include('../controller/verifica_login.php');
 
         <div class="form-textarea">
           <label>Descrição</label>
-            <textarea name="descricao" id="descricao" cols="60" rows="6" placeholder="Digite aqui a sua mensagem"></textarea>
+            <textarea name="descricao" id="descricao" cols="60" rows="6" placeholder="Digite aqui a sua mensagem" required ></textarea>
         </div>       
 
         <div class="form-group">
@@ -60,17 +60,17 @@ include('../controller/verifica_login.php');
 
         <div class="form-radio-checkbox">
           <label>Setor</label>
-          <label><input type="radio" name="setor" value="administrativo" class="input-radio"/>Administrativo</label>
-          <label><input type="radio" name="setor" value="atendimento" class="input-radio"/>Atendimento</label>
-          <label><input type="radio" name="setor" value="comercial" class="input-radio"/>Comercial</label>
-          <label><input type="radio" name="setor" value="financeiro" class="input-radio"/>Financeiro</label>
+          <label><input type="radio" name="setor" value="administrativo" class="input-radio" required/>Administrativo</label>
+          <label><input type="radio" name="setor" value="atendimento" class="input-radio" required />Atendimento</label>
+          <label><input type="radio" name="setor" value="comercial" class="input-radio" required />Comercial</label>
+          <label><input type="radio" name="setor" value="financeiro" class="input-radio" required />Financeiro</label>
         </div>
 
         <div class="form-radio-checkbox">
           <label>Prioridade</label>
-          <label><input type="radio" name="prioridade" value="normal" class="input-radio"/>Normal</label>
-          <label><input type="radio" name="prioridade" value="media" class="input-radio"/>Média</label>
-          <label><input type="radio" name="prioridade" value="alta" class="input-radio"/>Alta</label>
+          <label><input type="radio" name="prioridade" value="normal" class="input-radio" required />Normal</label>
+          <label><input type="radio" name="prioridade" value="media" class="input-radio" required />Média</label>
+          <label><input type="radio" name="prioridade" value="alta" class="input-radio" required />Alta</label>
         </div>
 
         <input type="hidden" id="usuario_id" name="usuario_id" value="<?php echo $_SESSION['usuario_id'];?>" />

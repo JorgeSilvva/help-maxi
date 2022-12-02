@@ -41,6 +41,16 @@ include('../models/conexao.php');
             padding-top: 1em;
         }
 
+        .msg{
+        width: 25%;
+        float: left;
+        }
+
+        .box-msg{ 
+         margin-left: auto;
+         margin-right: auto; 
+        }
+
         .table {     
             margin: 0 auto; 
         }
@@ -56,6 +66,9 @@ include('../models/conexao.php');
             justify-content: center;
             gap: .1%;
         }
+
+
+
     </style>
 </head>
 <body>
@@ -76,6 +89,19 @@ include('../models/conexao.php');
             </svg>
         </button>
     </div>
+
+    <?php
+    if(isset($_SESSION['frase'])):
+    ?>  
+        &nbsp;&nbsp;&nbsp;
+        <div class="alert-success">
+            <p><?php echo $_SESSION['frase'];?></p>
+        </div>
+    <?php
+    endif;
+    unset($_SESSION['frase']);
+    ?>
+
     <div class="m-5">
         <table class="table text-white table-bg">
             <thead>

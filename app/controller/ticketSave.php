@@ -1,10 +1,16 @@
 <?php
+    if(!isset($_SESSION)){
+        session_start();
+    }
 
     include('../models/conexao.php');
     
     if(isset($_POST['update']))
     {
         $ticket_id = $_POST['ticket_id'];
+
+        $frase = "Ticket atualizado, e-mail enviado com sucesso";
+        $_SESSION['frase'] = $frase;
         
         $assunto = mysqli_real_escape_string($conexao, trim($_POST['assunto']));
         $descricao = mysqli_real_escape_string($conexao, trim($_POST['descricao']));
@@ -14,7 +20,6 @@
         $email = mysqli_real_escape_string($conexao, trim($_POST['email']));
         $telefone = mysqli_real_escape_string($conexao, trim($_POST['telefone']));
         //$situacao = mysqli_real_escape_string($conexao, trim($_POST['situacao']));   
-        
         
         $sqlInsert = "UPDATE ticket 
         SET assunto='$assunto', descricao='$descricao', setor='$setor', prioridade='$prioridade', usuario_id='$usuario_id', email='$email', telefone='$telefone', data_solicitacao= NOW()

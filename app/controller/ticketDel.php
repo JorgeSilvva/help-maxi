@@ -1,9 +1,16 @@
 <?php
 
+if(!isset($_SESSION)){
+	session_start();
+}
     include('../models/conexao.php');
 
     if(!empty($_GET['ticket_id']))
     {
+
+        $frase = "Ticket removido, e-mail enviado com sucesso";
+        $_SESSION['frase'] = $frase;
+
         $ticket_id = $_GET['ticket_id'];
 
         $sqlSelect = "SELECT *  FROM ticket WHERE ticket_id=$ticket_id";

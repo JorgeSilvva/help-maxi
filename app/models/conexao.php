@@ -1,7 +1,7 @@
 <?php
-define('HOST', '127.0.0.1');
-define('USUARIO', 'root');
-define('SENHA', 'root@2022');
+define('HOST', 'helpmaxi-server.mysql.database.azure.com');
+define('USUARIO', 'zifbhoiyam');
+define('SENHA', 'HE84O7LQB6GHG287$');
 define('DB', 'helpmaxi');
 
 $conexao = mysqli_connect(HOST, USUARIO, SENHA, DB) or die ('Não foi possível conectar');

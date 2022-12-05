@@ -33,4 +33,3 @@ VALUES ('Teste', 'Descrição teste', 'financeiro', 'normal', '1', 'admin@mail.c
 
 INSERT INTO `ticket` (`assunto`, `descricao`, `setor`, `prioridade`, `usuario_id`, `email`, `telefone`, `situacao`,`data_solicitacao`) 
 VALUES ('Teste', 'Descrição teste', 'financeiro', 'normal', '2', 'usuario@mail.com', '13987654321', 'fechado', NOW());
-

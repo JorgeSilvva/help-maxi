@@ -25,7 +25,7 @@
         SET assunto='$assunto', descricao='$descricao', setor='$setor', prioridade='$prioridade', usuario_id='$usuario_id', email='$email', telefone='$telefone', data_solicitacao= NOW()
         WHERE ticket_id=$ticket_id";
         $result = $conexao->query($sqlInsert);
-        print_r($result);
+        //print_r($result);
     }
    
     header('Location: ../views/ticketLista.php');

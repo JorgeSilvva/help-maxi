@@ -62,6 +62,5 @@ session_start();
         <p>Projeto Integrador III - <a href="app/views/dashboardAdm.php">Home</a></p>
     </div>
 </footer>
-</footer>
 
 </html>

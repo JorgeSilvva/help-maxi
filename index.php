@@ -37,7 +37,7 @@ if(!isset($_SESSION)){
                         <form action="app/controller/login.php" method="POST">
                             <div class="field">
                                 <div class="control">
-                                    <input name="email" name="text" class="input is-large" placeholder="Seu e-mail" autofocus="">
+                                    <input name="email" class="input is-large" type="email" placeholder="Seu e-mail" autofocus="">
                                 </div>
                             </div>
                             <div class="field">
@@ -53,9 +53,9 @@ if(!isset($_SESSION)){
                             </div>                      
                         </form>
                     </div>
-                    <!--<div>
+                    <div>
                         <p>Esqueceu a senha?<a href="app/views/cadastroSenha.php"> Clique aqui.</a></p>
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </div>

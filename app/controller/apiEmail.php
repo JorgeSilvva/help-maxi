@@ -32,9 +32,9 @@ function enviarEmail($nome, $email, $acao){
 
 		#envia o e-mail
 		if($mail->send()) {
-			//echo 'Email enviado com sucesso.';
+			echo 'Email enviado com sucesso.';
 		} else {
-			//echo 'Falha no envio do e-mail.';
+			echo 'Falha no envio do e-mail.';
 		}
 	} catch (Exception $e) {
 		//echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";

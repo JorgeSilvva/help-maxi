@@ -20,7 +20,7 @@ if(!isset($_SESSION)){
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
-                    <h1 class="title has-text-white">Fazer meu cadastro</h1>
+                    <h1 class="title has-text-white">Fazer o cadastro</h1>
                     <h2 class="title has-text-white">Help-Maxi</a></h2>&nbsp;
                     <?php
                     if(isset($_SESSION['status_cadastro'])):

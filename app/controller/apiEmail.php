@@ -30,15 +30,11 @@ function enviarEmail($nome, $email, $acao){
 		$mail->Subject = 'Help-Maxi: Aviso!';
 		$mail->Body = 'Olá, <strong>' .$nome. '</strong>!<br><br> Sua solicitaçao de <strong>' .$acao. '</strong> foi realizada com sucesso!';
 		
-		#Debug inativo
-		$mail->send()
-
-		#Debug ativo
-		/*if($mail->send()) {
+		if($mail->send()) {
 			//echo 'Email enviado com sucesso.';
-		//} else {
+		} else {
 			//echo 'Falha no envio do e-mail.';
-		}*/
+		}
 			
 	} catch (Exception $e) {
 		//echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";

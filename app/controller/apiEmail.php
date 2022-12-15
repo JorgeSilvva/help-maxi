@@ -15,7 +15,7 @@ function enviarEmail($nome, $email, $acao){
 
 	try {
 		#Dados do remetente
-		$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+		//$mail->SMTPDebug = SMTP::DEBUG_SERVER;
 		$mail->isSMTP();
 		$mail->Host = 'smtp.gmail.com';
 		$mail->SMTPAuth = true;
@@ -32,20 +32,12 @@ function enviarEmail($nome, $email, $acao){
 
 		#envia o e-mail
 		if($mail->send()) {
-			echo 'Email enviado com sucesso.';
-			
-			$nivel_aut = 'admin';
-			 if ($_SESSION['nivel'] != $nivel_aut) {
-			 header('Location: ../views/cadastroEdit.php');
-			 exit();
-			 }
-			header('Location: ../views/cadastroLista.php');
-			 exit();
+			//echo 'Email enviado com sucesso.';
 		} else {
-			echo 'Falha no envio do e-mail.';
+			//echo 'Falha no envio do e-mail.';
 		}
 	} catch (Exception $e) {
-		echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
+		//echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
 	}
 }
 ?>

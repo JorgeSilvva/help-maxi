@@ -3,12 +3,6 @@ if(!isset($_SESSION)){
   session_start();
 }
 include('../controller/dashboardDados.php');
-
-/*date_default_timezone_set('America/Sao_Paulo');
-$data = date('d/m/Y');
-$dia = date('d');
-$mes = date('m');
-$ano = date('Y');*/
 ?>
 
 <!DOCTYPE html>

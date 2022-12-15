@@ -19,12 +19,12 @@ function enviarEmail($nome, $email, $acao){
 		$mail->isSMTP();
 		$mail->Host = 'smtp.gmail.com';
 		$mail->SMTPAuth = true;
-		$mail->Username = 'adv.connect.contato@gmail.com';
-		$mail->Password = 'tdtclvbosqlzkxmn';
+		$mail->Username = 'seuemail@gmail.com';
+		$mail->Password = 'suasenha';
 		$mail->Port = 587;
 
 		#Dados do destinatário
-		$mail->setFrom('adv.connect.contato@gmail.com');
+		$mail->setFrom('seuemail@gmail.com');
 		$mail->addAddress($email);
 		$mail->isHTML(true);
 		$mail->Subject = 'Help-Maxi: Aviso!';

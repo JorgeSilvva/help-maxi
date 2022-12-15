@@ -4,12 +4,14 @@ if(!isset($_SESSION)){
 }       
 
     include('../models/conexao.php');
+    include('apiEmail.php');
+
 
     if(isset($_POST['submit']))
     {
 
-        $frase = "Novo Ticket iniciado, e-mail enviado com sucesso";
-        $_SESSION['frase'] = $frase;
+        $aviso = "Novo Ticket iniciado, e-mail enviado com sucesso!";
+        $_SESSION['aviso'] = $aviso;
 
         $assunto = mysqli_real_escape_string($conexao, trim($_POST['assunto']));
         $descricao = mysqli_real_escape_string($conexao, trim($_POST['descricao']));
@@ -22,9 +24,16 @@ if(!isset($_SESSION)){
 
         $result = mysqli_query($conexao, "INSERT INTO ticket(assunto, descricao, setor, prioridade, usuario_id, email, telefone, data_solicitacao) 
         VALUES ('$assunto','$descricao','$setor','$prioridade', '$usuario_id', '$email','$telefone', NOW())");
+       
+        #Busca o nome pelo id usuario cadastrado no ticket e chama a função de de envio do e-mail
+        $buscanome = "SELECT nome FROM usuario WHERE usuario_id = $usuario_id";
+        $result = mysqli_query($conexao, $buscanome);
+        $resultado = mysqli_fetch_assoc($result);
+        $nome = $resultado['nome'];
+        $acao = 'abertura de ticket';
+        enviarEmail($nome,$email,$acao);
 
         header('Location: ../views/ticketLista.php');
-
     }
 
 ?>

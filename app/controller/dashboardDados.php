@@ -1,5 +1,4 @@
 <?php
-include('../controller/loginTest.php');
 include('../models/conexao.php');
 
 

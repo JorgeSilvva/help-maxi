@@ -23,12 +23,11 @@ include('../models/conexao.php');
 		$_SESSION['nivel'] = $resultado['nivel'];
 		if($_SESSION['nivel'] == "cliente"){
 			header("Location: ../views/dashboardCliente.php");
-			exit();
-			}elseif($_SESSION['nivel'] == "admin"){
-				header("Location: ../views/dashboardAdm.php");
-			}else{
+		}elseif($_SESSION['nivel'] == "admin"){
+			header("Location: ../views/dashboardAdm.php");
+		}else{
 			header('Location: /../index.php');
-			exit();
+		exit();
 		}
 	}else{  
 	$_SESSION['nao_autenticado'] = true;

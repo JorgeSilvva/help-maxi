@@ -33,6 +33,14 @@ function enviarEmail($nome, $email, $acao){
 		#envia o e-mail
 		if($mail->send()) {
 			echo 'Email enviado com sucesso.';
+			
+			$nivel_aut = 'admin';
+			 if ($_SESSION['nivel'] != $nivel_aut) {
+			 header('Location: ../views/cadastroEdit.php');
+			 exit();
+			 }
+			header('Location: ../views/cadastroLista.php');
+			 exit();
 		} else {
 			echo 'Falha no envio do e-mail.';
 		}

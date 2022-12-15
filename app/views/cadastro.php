@@ -3,7 +3,6 @@ if(!isset($_SESSION)){
 	session_start();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,7 +32,8 @@ if(!isset($_SESSION)){
                     endif;
                     unset($_SESSION['status_cadastro']);
                     ?>
-                    <?php
+
+                    <?php                   
                     if(isset($_SESSION['email_existe'])):
                     ?>
                         <div class="notification is-info">
@@ -43,7 +43,18 @@ if(!isset($_SESSION)){
                     endif;
                     unset($_SESSION['email_existe']);
                     ?>
-                    <div class="box">
+
+                    <?php                   
+                    if(isset($_SESSION['dados_invalidos'])):
+                    ?>
+                        <div class="notification is-danger">
+                            <p>Preencha todos os campos do formulário. Em seguida, clique em cadastrar.</p>
+                        </div>
+                    <?php
+                    endif;
+                    unset($_SESSION['dados_invalidos']);
+                    ?>                 
+                   <div class="box">
                         <form action="../controller/cadastro.php" method="POST">
                             <div class="field">
                                 <div class="control">
@@ -52,7 +63,7 @@ if(!isset($_SESSION)){
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input name="email" type="text" class="input is-large" placeholder="Digite um e-mail válido">
+                                    <input name="email" type="email" class="input is-large" placeholder="Digite um e-mail válido">
                                 </div>
                             </div>
                             <div class="field">

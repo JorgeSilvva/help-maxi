@@ -106,7 +106,7 @@ foreach ($resultado as $fechados) {
 }
 
 # Calcula o indice dos meus chamados atendidos
-$meuindice = ($fechados * 100)/ $meustickets;
+//$meuindice = ($fechados * 100)/ $meustickets;
 //echo round($indice, 2);
 //echo '% resolução';
 //echo "<br>";

@@ -48,9 +48,9 @@ $conta = "SELECT COUNT(situacao) FROM ticket WHERE situacao = 'aberto'";
 $result = mysqli_query($conexao, $conta);
 $resultado = mysqli_fetch_assoc($result);
 foreach ($resultado as $aberto) {
-   // echo $aberto;
+    //echo $aberto;
     //echo ' abertos';
-   // echo "<br>";
+    //echo "<br>";
 }
 
 # Conta o numero total de tickets fechados
@@ -58,16 +58,16 @@ $conta = "SELECT COUNT(situacao) FROM ticket WHERE situacao = 'fechado'";
 $result = mysqli_query($conexao, $conta);
 $resultado = mysqli_fetch_assoc($result);
 foreach ($resultado as $fechado) {
-   // echo $fechado;
+    //echo $fechado;
     //echo ' fechados';
     //echo "<br>";
 }
 
 # Calcula o indice dos chamados atendidos
 $indice = ($fechado * 100)/ $ticket;
-//echo round($indice, 2);
-//echo '% resolução';
-//echo "<br>";
+    //echo round($indice, 2);
+    //echo '% resolução';
+    //echo "<br>";
 
 
 #----------------------Dados para o dashboard do Cliente--------------------------------------------#
@@ -89,9 +89,9 @@ $conta = "SELECT COUNT(situacao) FROM ticket WHERE usuario_id=$user AND situacao
 $result = mysqli_query($conexao, $conta);
 $resultado = mysqli_fetch_assoc($result);
 foreach ($resultado as $abertos) {
-   // echo $aberto;
+    //echo $aberto;
     //echo ' abertos';
-   // echo "<br>";
+    //echo "<br>";
 }
 
 # Conta meus tickets fechados
@@ -100,13 +100,17 @@ $conta = "SELECT COUNT(situacao) FROM ticket WHERE usuario_id=$user AND situacao
 $result = mysqli_query($conexao, $conta);
 $resultado = mysqli_fetch_assoc($result);
 foreach ($resultado as $fechados) {
-   // echo $aberto;
+    //echo $aberto;
     //echo ' abertos';
-   // echo "<br>";
+    //echo "<br>";
 }
 
 # Calcula o indice dos meus chamados atendidos
-//$meuindice = ($fechados * 100)/ $meustickets;
-//echo round($indice, 2);
-//echo '% resolução';
-//echo "<br>";
+if($meustickets == 0){
+    $meuindice = '';
+}else{
+    $meuindice = ($fechados * 100)/ $meustickets;
+}
+    //echo round($indice, 2);
+    //echo '% resolução';
+    //echo "<br>";

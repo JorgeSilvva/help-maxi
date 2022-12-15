@@ -2,6 +2,7 @@
 if(!isset($_SESSION)){
   session_start();
 }
+include('../controller/loginTest.php');
 include('../controller/dashboardDados.php');
 ?>
 

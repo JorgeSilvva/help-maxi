@@ -7,6 +7,10 @@ CREATE TABLE `helpmaxi`.`usuario`(
 	`nome` VARCHAR(200) NOT NULL,
 	`email` VARCHAR(200) NOT NULL, 
 	`senha` VARCHAR(32) NOT NULL,
+	`telefone` VARCHAR(15) NOT NULL DEFAULT '',
+	`endereco` VARCHAR(200) NOT NULL DEFAULT '',
+	`cidade` VARCHAR(30) NOT NULL DEFAULT '',
+	`estado` VARCHAR(20) NOT NULL DEFAULT '',
 	`nivel` VARCHAR(10) NOT NULL DEFAULT 'cliente',
 	`data_cadastro` DATETIME NOT NULL,
 	PRIMARY KEY (`usuario_id`));

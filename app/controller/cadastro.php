@@ -5,6 +5,12 @@ if(!isset($_SESSION)){
 include("../models/conexao.php");
 include('apiEmail.php');
 
+if(empty($_POST['nome']) || empty($_POST['email']) || empty($_POST['senha'])) {
+	$_SESSION['dados_invalidos'] = true;
+	header('Location: ../views/cadastro.php');
+	exit(); 
+}
+
 $nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
 $email = mysqli_real_escape_string($conexao, trim($_POST['email']));
 $senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha'])));

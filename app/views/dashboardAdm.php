@@ -2,10 +2,12 @@
 if(!isset($_SESSION)){
 session_start();
 }
+include('../controller/loginTest.php');
 include('../controller/dashboardDados.php');
 
 #Controle de Acesso
 $nivel_aut = 'admin';
+
 if ($_SESSION['nivel'] != $nivel_aut) {
   header("Location: dashboardCliente.php");
   exit();

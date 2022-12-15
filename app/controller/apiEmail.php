@@ -29,13 +29,13 @@ function enviarEmail($nome, $email, $acao){
 		$mail->isHTML(true);
 		$mail->Subject = 'Help-Maxi: Aviso!';
 		$mail->Body = 'Olá, <strong>' .$nome. '</strong>!<br><br> Sua solicitaçao de <strong>' .$acao. '</strong> foi realizada com sucesso!';
-		
+
+		#envia o e-mail
 		if($mail->send()) {
 			//echo 'Email enviado com sucesso.';
 		} else {
 			//echo 'Falha no envio do e-mail.';
 		}
-			
 	} catch (Exception $e) {
 		//echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
 	}

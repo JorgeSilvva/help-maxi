@@ -19,7 +19,6 @@ include('../models/conexao.php');
 	
 	if(isset($resultado)){
 		$_SESSION['usuario_id'] = $resultado['usuario_id'];
-		//$_SESSION['ticket_id'] = $resultado['ticket_id'];
 		$_SESSION['nome'] = $resultado['nome'];
 		$_SESSION['nivel'] = $resultado['nivel'];
 		if($_SESSION['nivel'] == "cliente"){
@@ -31,7 +30,6 @@ include('../models/conexao.php');
 			header('Location: /../index.php');
 			exit();
 		}
-
 	}else{  
 	$_SESSION['nao_autenticado'] = true;
 	header('Location: /../index.php');
